@@ -11,9 +11,9 @@ function sort(arr) {
         {
             if(arr[j] < arr[smallest])
                 smallest = j;
-            if(j === arr.length - 1  && i !== smallest)
-                swap(smallest,i,arr)
+
         }
+        swap(smallest,i,arr)
     }
 
     return arr;

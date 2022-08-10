@@ -3,7 +3,18 @@ function sort(arr) {
     if(arr.length === 0 || arr.length === 1)
         return arr;
 
+    mergeSort(arr)
     return arr;
+}
+
+function mergeSort(arr){
+    if(arr.length <= 1){
+        return arr
+    }
+    let leftSubarray = mergeSort(arr.slice(0,arr.length/2))
+    let rightSubarray = mergeSort(arr.slice(arr.length/2,arr.length))
+    return merge(leftSubarray,rightSubarray)
+
 }
 
 function merge(arr1,arr2){
